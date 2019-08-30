@@ -4,16 +4,16 @@ using System.Text;
 
 namespace OOP_Homework
 {
-    class Ostrich:Birds, IWalk
+    public class Ostrich:Birds, IWalk
     {
-        private int speed;
+        
 
         public Ostrich(string name) : base(name)
         {
 
         }
 
-        public void Walk()
+        public void Walk(int speed)
         {
             if (speed >= 15)
             {
@@ -23,7 +23,12 @@ namespace OOP_Homework
             {
                 Console.WriteLine("$I'm {Name} and i run");
             }
-            }
         }
+
+        public void Walk()
+        {
+            throw new NotImplementedException();
+        }
+    }
     }
 

@@ -4,16 +4,20 @@ using System.Text;
 
 namespace OOP_Homework
 {
-    class WildDuck : Birds, Iswim, IFly, IWalk
+    public class WildDuck : Birds, Iswim, IFly, IWalk
+          
 
     {
-        private int speed;
 
+        
         public WildDuck(string name) : base(name)
         {
 
         }
-        public void Fly()
+        
+
+
+        public void Fly(int speed)
         {
             if (speed < 5)
             {
@@ -25,7 +29,12 @@ namespace OOP_Homework
             }
         }
 
-        public void Swim()
+        public void Fly()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Swim(int speed)
         {
             if (speed < 5)
             {
@@ -37,7 +46,12 @@ namespace OOP_Homework
             }
         }
 
-        public void Walk()
+        public void Swim()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Walk(int speed)
         {
             if (speed < 5)
             {
@@ -47,6 +61,11 @@ namespace OOP_Homework
             {
                 Console.WriteLine($"I'm {Name} and and i walk very fast");
             }
+        }
+
+        public void Walk()
+        {
+            throw new NotImplementedException();
         }
     }
 }

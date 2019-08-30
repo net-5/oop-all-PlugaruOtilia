@@ -6,7 +6,19 @@ namespace OOP_Homework
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WildDuck newDuck = new WildDuck("Rata");
+            newDuck.Fly(4);
+           
+           
+            Platypus platypus = new Platypus("Plat");
+            platypus.Walk(10);
+
+            Ostrich ostrich = new Ostrich("Strut");
+            ostrich.Walk(15);
+
+            Bat bat = new Bat("Liliac");
+            bat.Fly(30);
+
         }
     }
 }

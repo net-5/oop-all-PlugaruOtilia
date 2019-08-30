@@ -4,15 +4,16 @@ using System.Text;
 
 namespace OOP_Homework
 {
-    class Bat: Mammals, IFly
+   public class Bat: Mammals, IFly
     {
-        private int speed;
+        
 
         public Bat(string name) : base(name)
         {
 
         }
-public void Fly()
+
+        public void Fly(int speed)
         {
             if (speed < 15)
             {
@@ -23,5 +24,11 @@ public void Fly()
                 Console.WriteLine($"I'm {Name} and flying very fast");
             }
         }
+
+        public void Fly()
+        {
+            throw new NotImplementedException();
+        }
     }
-}
+    }
+

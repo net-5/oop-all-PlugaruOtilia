@@ -4,9 +4,9 @@ using System.Text;
 
 namespace OOP_Homework
 {
-    class Platypus : Mammals, IWalk, Iswim
+    public class Platypus : Mammals, IWalk, Iswim
     {
-        private int speed;
+        
 
         public Platypus(string name) : base(name)
         {
@@ -15,7 +15,7 @@ namespace OOP_Homework
 
        
 
-        public void Walk()
+        public void Walk(int speed)
         {
             if (speed < 10)
             {
@@ -31,9 +31,19 @@ namespace OOP_Homework
             }
         }
 
-        public void Swim()
+        public void Swim(int speed)
         {
             
+        }
+
+        public void Walk()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Swim()
+        {
+            throw new NotImplementedException();
         }
     }
 }
